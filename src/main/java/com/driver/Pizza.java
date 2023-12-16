@@ -80,7 +80,7 @@ public class Pizza {
         for(String Bill:billList){
             bill += Bill+"\n";
         }
-        bill +="Total Price: "+getPrice();
+        bill +="Total Price: "+getPrice()+"\n";
         return this.bill.trim();
     }
 }
