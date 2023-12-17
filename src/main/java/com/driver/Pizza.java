@@ -81,6 +81,6 @@ public class Pizza {
             bill += Bill+"\n";
         }
         bill +="Total Price: "+getPrice()+"\n";
-        return this.bill.trim();
+        return this.bill;
     }
 }
