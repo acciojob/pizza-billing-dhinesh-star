@@ -77,10 +77,19 @@ public class Pizza {
 
     public String getBill(){
         // your code goes here
-        for(String Bill:billList){
-            bill += Bill+"\n";
+        StringBuilder sb=new StringBuilder();
+        sb.append("Base Price Of The Pizza: ").append(isVeg?300:400).append("\n");
+        if(isCheeseAdded==true){
+            sb.append("Extra Cheese Added: 80").append("\n");
         }
-        bill +="Total Price: "+getPrice()+"\n";
-        return this.bill;
+        if(isToppingAdded==true){
+            sb.append("Extra Toppings Added: ").append(isVeg?70:120).append("\n");
+        }
+        if(isPaperBagAdded==true){
+            sb.append("Paperbag Added: 20").append("\n");
+        }
+        sb.append("Total Price: ").append(this.price).append("\n");
+        bill=sb.toString();
+        return bill;
     }
 }
